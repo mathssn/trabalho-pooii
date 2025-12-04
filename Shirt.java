@@ -20,4 +20,8 @@ public class Shirt implements Product {
         return price;
     }
 
+    @Override
+    public Shirt clone() {
+        return new Shirt(size, color, price);
+    }
 }

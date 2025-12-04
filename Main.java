@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
 public class Main {
+
+    public static Inventario inventario = new Inventario();
     
     public static void main(String[] args) {
-
-        Cart cart = new Cart();
+        Carrinho cart = new Carrinho();
         Scanner input = new Scanner(System.in);
         
         System.out.println("Seja bem vindo!");
@@ -19,9 +20,28 @@ public class Main {
             int escolha = input.nextInt();
             if (escolha == 0) {
                 break;
+            } else if (escolha == 2) {
+                verProdutos(input, cart);
+            } else if (escolha == 1) {
+                cart.showCart();
             }
         }
 
         input.close();
+    }
+
+    public static void verProdutos(Scanner input, Carrinho cart) {
+        inventario.showInventory();
+        System.out.print("Escolha algum produto para adicionar ao carrinho: ");
+        int escolha = input.nextInt();
+        if (escolha == 0) {
+            return;
+        }
+
+        Product item = inventario.getProduct(escolha);
+        System.out.println(item);
+        if (item != null) {
+            cart.addProduct(item);
+        }
     }
 }
