@@ -5,7 +5,8 @@ public class Inventario {
     private ArrayList<Product> produtos = new ArrayList<Product>();
 
     public Inventario() {
-        produtos.add(new Shirt("-", "-", 0.0));
+        produtos.add(new Shirt("-", "-", 50.0, "Gucci"));
+        produtos.add(new Shirt("-", "-", 65.0, "Lacoste"));
     }
 
     public void showInventory() {

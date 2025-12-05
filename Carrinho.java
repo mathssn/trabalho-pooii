@@ -12,6 +12,8 @@ public class Carrinho {
         int i = 1;
         for (Product produto: produtos) {
             System.out.println(i + ". " + produto.getNome());
+            System.out.println(produto.getPrice());
+            System.out.println();
             i++;
         }
     }
