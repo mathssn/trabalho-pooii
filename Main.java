@@ -50,7 +50,24 @@ public class Main {
 
             shirt.setColor(cor);
             shirt.setSize(tamanho);
-            cart.addProduct(shirt);
+
+            Product camisaDecorada = shirt;
+
+            System.out.println("Deseja adicionar extras?");
+            System.out.println("1. Estampa (+15)");
+            System.out.println("2. Gola Polo (+10)");
+            System.out.println("0. Nenhum");
+            int extra = inputInt("Escolha: ");
+
+            if (extra == 1) {
+                camisaDecorada = new EstampaDecorator(camisaDecorada);
+            } 
+            else if (extra == 2) {
+                camisaDecorada = new GolaPoloDecorator(camisaDecorada);
+            }
+
+            cart.addProduct(camisaDecorada);
+            //cart.addProduct(shirt);
         }
     }
 
