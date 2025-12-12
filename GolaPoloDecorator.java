@@ -1,8 +1,8 @@
-public class GolaPoloDecorator extends ProductDecorator {
+public class GolaPoloDecorator extends ProdutoDecorator {
 
-    public GolaPoloDecorator(Product produto) {
+    public GolaPoloDecorator(Produto produto) {
         super(produto);
-        this.setPrice(produto.getPrice() + 10);
+        this.setPreco(produto.getPreco() + 10);
     }
 
     @Override

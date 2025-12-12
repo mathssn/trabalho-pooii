@@ -36,22 +36,22 @@ public class Main {
             return;
         }
 
-        Product prototipo = inventario.getProduct(escolha);
+        Produto prototipo = inventario.getProduto(escolha);
         if (prototipo == null) {
             return;
         }
 
-        Product item = prototipo.clone();
+        Produto item = prototipo.clone();
 
-        if (item instanceof Shirt) {
-            Shirt shirt = (Shirt) item;
+        if (item instanceof Camisa) {
+            Camisa camisa = (Camisa) item;
             String cor = inputStr("Cor: ");
             String tamanho = inputStr("Tamanho: ");
 
-            shirt.setColor(cor);
-            shirt.setSize(tamanho);
+            camisa.setColor(cor);
+            camisa.setSize(tamanho);
 
-            Product camisaDecorada = shirt;
+            Produto camisaDecorada = camisa;
 
             System.out.println("Deseja adicionar extras?");
             System.out.println("1. Estampa (+15)");
@@ -67,7 +67,6 @@ public class Main {
             }
 
             cart.addProduct(camisaDecorada);
-            //cart.addProduct(shirt);
         }
     }
 

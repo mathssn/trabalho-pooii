@@ -1,8 +1,8 @@
-public class EstampaDecorator extends ProductDecorator {
+public class EstampaDecorator extends ProdutoDecorator {
 
-    public EstampaDecorator(Product produto) {
+    public EstampaDecorator(Produto produto) {
         super(produto);
-        this.setPrice(produto.getPrice() + 15);
+        this.setPreco(produto.getPreco() + 15);
     }
 
     @Override
