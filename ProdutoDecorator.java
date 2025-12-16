@@ -26,13 +26,4 @@ public abstract class ProdutoDecorator implements Produto {
         return produto.clone();
     }
 
-    @Override
-    public void setMarca(String marca) {
-        produto.setMarca(marca);
-    }
-
-    @Override
-    public String getMarca() {
-        return produto.getMarca();
-    }
 }

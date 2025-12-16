@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Main {
 
@@ -46,10 +46,8 @@ public class Main {
         if (item instanceof Camisa) {
             Camisa camisa = (Camisa) item;
             String cor = inputStr("Cor: ");
-            String tamanho = inputStr("Tamanho: ");
 
-            camisa.setColor(cor);
-            camisa.setSize(tamanho);
+            camisa.setCor(cor);
 
             Produto camisaDecorada = camisa;
 
@@ -82,3 +80,4 @@ public class Main {
         return texto;
     }
 }
+*/
