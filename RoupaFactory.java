@@ -1,3 +1,4 @@
 public interface RoupaFactory {
-    Produto criarCamisa();
+    Camisa criarCamisa();
+    Calca criarCalca();
 }
